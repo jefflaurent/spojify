@@ -25,35 +25,54 @@ function LikedPage() {
         setTracks(trackList)
     }
 
-    return (
-        <div>
-            <NavBar />
-            <div className="header">
-                My Favorites
+    console.log(tracks)
+
+    if(tracks == undefined || tracks.length == 0) {
+        return (
+            <div>
+                <NavBar />
+                <div className="header">
+                    My Favorites
+                </div>
+                <div className="msg">
+                    You have no favorites
+                </div>
             </div>
-            <div className="track-container">
-                {tracks?.map(track => {
-                    return (
-                        <div className="track">
-                            <div className="track-left">
-                                <div className="star" data-value={track.id} onClick={() => {
-                                    removeLikedSong(track)
-                                }}>
-                                    <i class="fas fa-trash del-icon"></i>
+        )
+    }
+    else {
+        return (
+            <div>
+                <NavBar />
+                <div className="header">
+                    My Favorites
+                </div>
+                <div className="track-container">
+                    {tracks?.map(track => {
+                        return (
+                            <div className="track">
+                                <div className="track-left">
+                                    <div className="star" data-value={track.id} onClick={() => {
+                                        removeLikedSong(track)
+                                    }}>
+                                        <i class="fas fa-trash del-icon"></i>
+                                    </div>
+                                    <div>
+                                        {track.name}
+                                    </div>
                                 </div>
-                                <div>
-                                    {track.name}
+                                <div className="track-right">
+                                    <audio src={track.preview_url} controls />
                                 </div>
                             </div>
-                            <div className="track-right">
-                                <audio src={track.preview_url} controls />
-                            </div>
-                        </div>
-                    )
-                })}
+                        )
+                    })}
+                </div>
             </div>
-        </div>
-    )
+        )
+    }
+
+
 }
 
 export default LikedPage
