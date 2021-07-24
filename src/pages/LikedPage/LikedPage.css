@@ -1,0 +1,62 @@
+.track-container {
+    width: 100%;
+    padding-bottom: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-dark-primary);
+    min-height: 100vh;
+}
+
+.track {
+    width: 90%;
+    border: 0.2vh solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 2% 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.track-left {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.star {
+    margin-right: 2%;
+}
+
+.star:hover {
+    cursor: pointer;
+}
+
+.track-right {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.track audio {
+    width: 80%;
+    max-height: 2.5rem;
+    background-color: var(--bg-dark-primary);
+}
+
+.header {
+    width: 100%;
+    padding: 3% 5%;
+    padding-bottom: 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: white;
+    background-color: var(--bg-dark-primary);
+}
+
+.del-icon:hover {
+    color: var(--spotify-green)
+}

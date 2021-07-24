@@ -1,0 +1,25 @@
+.nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2% 4%;
+    background-color: black;
+    color: #1DB954;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-left {
+    width: 50%;
+}
+
+.nav-right {
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+a {
+    color: var(--spotify-green)
+}
